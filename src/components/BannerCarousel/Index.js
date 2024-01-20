@@ -1,9 +1,9 @@
 import { Carousel } from 'antd';
 import React from 'react'
-import banner1 from '../../assets/banner1.png'
-import banner2 from '../../Assets/banner2.png'
-import banner3 from '../../Assets/banner3.png'
-import banner4 from '../../Assets/banner4.png'
+import banner1 from '/src/assets/banner1.png'
+import banner2 from '/src/assets/banner2.png'
+import banner3 from '/src/assets/banner3.png'
+import banner4 from '/src/assets/banner4.png'
 import Image from 'next/image';
 
 
