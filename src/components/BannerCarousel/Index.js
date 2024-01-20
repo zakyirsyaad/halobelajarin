@@ -8,11 +8,7 @@ import Image from 'next/image';
 
 
 export default function BannerCarousel() {
-    const contentStyle = {
-        width: '100%',
-        height: 'auto',
-        color: '#fff',
-    };
+
     return (
         <div>
             <Carousel autoplay>

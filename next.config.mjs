@@ -4,6 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 hostname: 'media.discordapp.net',
+                hostname: 'img.freepik.com'
             },
         ],
     },
