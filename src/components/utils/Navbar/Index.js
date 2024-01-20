@@ -16,8 +16,8 @@ export default function Navbar() {
                 />
             </Link>
             <Search />
-            <Link href='/' className='md:text-xl text-xl font-medium mb-2 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
-            <Link href='/' className='md:text-xl text-xl font-medium mb-5 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
+            <Link href='' className='md:text-xl text-xl font-medium mb-2 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
+            <Link href='' className='md:text-xl text-xl font-medium mb-5 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
             <JoinModal />
         </header>
     );
