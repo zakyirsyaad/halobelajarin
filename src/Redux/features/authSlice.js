@@ -14,6 +14,7 @@ export const initializeAuthState = createAsyncThunk('initializeAuthState', async
     }
 });
 
+
 export const signUpUser = createAsyncThunk('signupuser', async (body) => {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/signup`, {
@@ -86,6 +87,7 @@ const authSlice = createSlice({
         error: "",
         img: "",
         uid: "",
+        // isLoggedIn: false
     },
     reducers: {
         addUser: (state, action) => {
@@ -95,22 +97,35 @@ const authSlice = createSlice({
             state.accessToken = action.payload || "";
         },
         logout: (state, action) => {
-            state.accessToken = action.payload;
+            state.accessToken = null;
+            localStorage.clear();
+            window.location.pathname = '/'
         },
     },
     extraReducers: (builder) => {
         builder
+            .addCase(initializeAuthState.fulfilled, (state, { payload }) => {
+                // state.msg = payload.msg;
+                state.user = payload.user;
+                state.img = payload.img;
+                state.accessToken = payload.accessToken;
+                state.uid = payload.uid;
+
+            })
             .addCase(logoutUser.pending, (state) => {
                 state.loading = true;
-                state.error = toast.loading("Pending", {
-                    duration: 3000
+                toast.loading('Pending', {
+                    position: 'top-right',
+                    autoClose: false, // Sesuaikan dengan kebutuhan Anda
                 });
             })
             .addCase(logoutUser.fulfilled, (state) => {
                 state.loading = false;
                 state.accessToken = null;
+                // state.isLoggedIn = false;
                 localStorage.clear();
                 window.location.pathname = '/'
+
             })
             .addCase(logoutUser.rejected, (state, action) => {
                 state.loading = false;
@@ -119,8 +134,9 @@ const authSlice = createSlice({
             })
             .addCase(signInUser.pending, (state) => {
                 state.loading = true;
-                state.error = toast.loading("Pending", {
-                    duration: 3000
+                toast.loading('Pending', {
+                    position: 'top-right',
+                    autoClose: false, // Sesuaikan dengan kebutuhan Anda
                 });
             })
             .addCase(signInUser.fulfilled, (state, { payload }) => {
@@ -136,12 +152,13 @@ const authSlice = createSlice({
                     toast.success('Successfully toasted!')
 
                     localStorage.setItem('accessToken', accessToken);
-                    localStorage.setItem('user', user);
+                    localStorage.setItem('user', JSON.stringify(user));
                     localStorage.setItem('foto', img);
                     localStorage.setItem('uid', uid);
-                    return window.location.pathname = `/member/${user.replace(/ /g, '-')}`;
+                    return window.location.pathname = `/member/${uid}`;
                 }
             })
+
             .addCase(signInUser.rejected, (state, action) => {
                 state.loading = false;
                 state.error = "Request rejected: " + action.error.message;
@@ -150,8 +167,11 @@ const authSlice = createSlice({
             })
             .addCase(signUpUser.pending, (state) => {
                 state.loading = true;
-                state.error = toast.loading("Pending", {
-                    duration: 3000
+                state.error = ""
+
+                toast.loading('Pending', {
+                    position: 'top-right',
+                    autoClose: false, // Sesuaikan dengan kebutuhan Anda
                 });
             })
             .addCase(signUpUser.fulfilled, (state, { payload: { error, msg } }) => {
@@ -160,7 +180,7 @@ const authSlice = createSlice({
                     state.error = error;
                 } else {
                     toast.success('Successfully toasted!')
-                    window.location.pathname = 'MemberJoin/Login'
+                    window.location.pathname = 'Login'
                 }
             })
             .addCase(signUpUser.rejected, (state) => {
@@ -168,16 +188,10 @@ const authSlice = createSlice({
                 state.error = "Request rejected";
                 toast.error("Rejected")
             })
-            .addCase(initializeAuthState.fulfilled, (state, { payload }) => {
-                state.user = payload.user;
-                state.photoURL = payload.photoURL;
-                state.accessToken = payload.accessToken;
-                state.uid = payload.uid;
 
-            })
     }
 })
 
 
-export const { addToken } = authSlice.actions
+export const { addToken, addUser, logout } = authSlice.actions
 export default authSlice.reducer;

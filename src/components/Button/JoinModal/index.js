@@ -3,8 +3,6 @@
 import Link from "next/link"
 
 export default function JoinModal() {
-
-
     return (
         <div>
             {/* Open the modal using document.getElementById('ID').showModal() method */}
