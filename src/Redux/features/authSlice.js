@@ -155,7 +155,7 @@ const authSlice = createSlice({
                     localStorage.setItem('user', JSON.stringify(user));
                     localStorage.setItem('foto', img);
                     localStorage.setItem('uid', uid);
-                    return window.location.pathname = `/member/${uid}`;
+                    return window.location.pathname = `/member/${user.replace(/ /g, '-')}`;
                 }
             })
 

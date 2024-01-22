@@ -4,11 +4,12 @@ import Testimonicarousel from "@/components/TestimoniCarousel/Index";
 import Category from "@/components/utils/Category/Index";
 import Footer from "@/components/utils/Footer/Index";
 import Navbar from "@/components/utils/Navbar/Index";
-import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
+// import { useRouter } from "next/navigation";
+// import { useEffect } from "react";
+// import { useSelector } from "react-redux";
 
 export default function Home() {
-  // const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+  // const isLoggedIn = useSelector(state => state.auth.accessToken);
   // const user = useSelector(state => state.auth.user);
 
   // const router = useRouter();

@@ -14,20 +14,17 @@ export default async function GettAllClass() {
                         const mentor_name = data.mentor_name ? data.mentor_name.replace(/ /g, '-') : '';
                         return (
                             <Link href={`/${mentor_name}/${data.materi_id}`} key={data.materi_id}>
-                                <div className="card w-96 mt-10 h-5/6 bg-blue-700 text-white shadow-lg md:m-14 md:ml-0 hover:scale-105 duration-300">
-                                    <figure className=' h-60 rounded-2xl'>
-                                        <img src={data.image} className=' w-96 h-60 object-cover' alt="Shoes" />
+                                <div className="card w-72 h-96 mt-10 bg-blue-700 text-white shadow-lg md:m-5 md:ml-0 hover:scale-105 duration-300">
+                                    <figure className=' h-40  rounded-2xl'>
+                                        <img src={data.image} className=' w-72 h-44 object-cover' alt="Shoes" />
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title capitalize">
-                                            {data.title}
-                                            {/* <div className="badge badge-secondary">NEW</div> */}
-                                        </h2>
+                                        <p className=" capitalize text-ellipsis">{data.title}</p>
                                         <p>{data.mentor_name}</p>
-                                        <p className='font-bold text-xl'>Rp. {(parseFloat(data.price)).toLocaleString()}</p>
+                                        <p className='font-bold'>Rp. {(parseFloat(data.price)).toLocaleString()}</p>
                                         <div className="card-actions justify-end capitalize">
-                                            <div className="badge badge-outline px-5 py-3">{data.category}</div>
-                                            <div className="badge badge-outline px-5 py-3">{data.subMenu}</div>
+                                            <div className="badge badge-outline bg-white text-blue-700 px-5 py-3">{data.category}</div>
+                                            <div className="badge badge-outline bg-white text-blue-700 px-5 py-3">{data.subMenu}</div>
                                         </div>
                                     </div>
                                 </div>
