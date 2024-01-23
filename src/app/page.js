@@ -13,19 +13,17 @@ import { useEffect } from "react";
 export default function Home() {
   // const isLoggedIn = useSelector(state => state.auth.accessToken);
   // const user = useSelector(state => state.auth.user);
-
-  const isLoggedIn = localStorage.getItem('accessToken')
-  const uid = localStorage.getItem('uid')
-
   const router = useRouter();
 
   useEffect(() => {
+    const isLoggedIn = localStorage.getItem('accessToken')
+    const uid = localStorage.getItem('uid')
     // Pemeriksaan status login
     if (isLoggedIn) {
       // Jika sudah login dan uid ada, arahkan ke halaman utama
       router.push(`/member/${uid}`);
     }
-  }, [isLoggedIn]); // Run the effect when isLoggedIn changes
+  }, []); // Run the effect when isLoggedIn changes
 
   return (
     <div className="bg-home">
