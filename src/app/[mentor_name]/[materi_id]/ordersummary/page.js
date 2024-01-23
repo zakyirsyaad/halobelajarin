@@ -44,6 +44,7 @@ export default function OrderSummary({ searchParams }) {
 
     const payHandle = async () => {
         try {
+            const LoadingToast = toast.loading("Processing Payment")
             // Lakukan operasi penyimpanan ke database di sini
             const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/pay`, {
                 title,
@@ -57,9 +58,9 @@ export default function OrderSummary({ searchParams }) {
             const responseData = response.data;
             console.log(responseData)
             const token = JSON.parse(responseData.dataPayment.response).token;
-
             // Redirect ke halaman pembayaran Midtrans
             window.snap.pay(token);
+            toast.dismiss(LoadingToast)
 
             // Outputkan respons atau lakukan operasi lain sesuai kebutuhan
             console.log('Order confirmation response:', response.data);

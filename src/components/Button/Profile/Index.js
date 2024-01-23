@@ -31,9 +31,9 @@ export default function Profile() {
 
     return (
         <div className="dropdown dropdown-hover">
-            <div tabIndex={0} role="button" className="btn rounded-lg bg-white text-blue-400 border-blue-700">
+            <div tabIndex={0} role="button" className="btn rounded-full bg-white border-none text-black">
                 <div className="avatar">
-                    <div className="w-7 mr-1 rounded-full ring ring-default ring-offset-base-100 ring-offset-2">
+                    <div className="w-7 mr-1 rounded-full ring ring-black ring-offset-base-100 ring-offset-3">
                         <Image src={fotoString} alt="foto-profile" width={300} height={300} />
                     </div>
                 </div>
