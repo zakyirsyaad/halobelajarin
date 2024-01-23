@@ -6,11 +6,11 @@ import Search from '../../Search/Index';
 import JoinModal from '@/components/Button/JoinModal';
 import logoNav from '../../../assets/logo-belajarin.png';
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
 import Profile from '@/components/Button/Profile/Index';
 
 export default function Navbar() {
-    const isLoggedIn = useSelector(state => state.auth.accessToken !== '');
+    const isLoggedIn = typeof window !== 'undefined' ? localStorage.getItem('accessToken') : null;
+
 
     return (
         <header className='flex flex-col justify-between text-white sm: p-4 md:px-36 md:py-8 md:flex-row md:items-center '>
@@ -24,9 +24,8 @@ export default function Navbar() {
             <Search />
             <Link href='/' className='md:text-xl text-xl font-medium mb-2 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
             <Link href='/' className='md:text-xl text-xl font-medium mb-5 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
-            <div>
-                {isLoggedIn ? <Profile /> : <JoinModal />}
-            </div>
+            {isLoggedIn ? <Profile /> : <JoinModal />}
+
         </header>
     );
 }
