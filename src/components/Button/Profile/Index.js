@@ -2,12 +2,14 @@
 
 import { logout } from '@/Redux/features/authSlice';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function Profile() {
     const user = useSelector((state) => state.auth.user);
     const foto = useSelector((state) => state.auth.img);
+
 
     const [userString, setUserString] = useState('');
     const [fotoString, setFotoString] = useState('');
@@ -23,6 +25,7 @@ export default function Profile() {
 
     }, [user, foto]);
 
+    const uid = localStorage.getItem('uid')
 
     const dispatch = useDispatch();
     const handleLogout = () => {
@@ -41,7 +44,12 @@ export default function Profile() {
             </div>
             {/* <div className='capitalize font-black text-lg'>{userString}</div> */}
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-52 text-black">
-                <li><button onClick={handleLogout} >Logout</button></li>
+                <li>
+                    <Link href={`/member/${uid}/profile`}>
+                        <button className='flex flex-row items-center'>Dashboard</button>
+                    </Link>
+                </li>
+                <li><button onClick={handleLogout}>Logout</button></li>
             </ul>
         </div>
 

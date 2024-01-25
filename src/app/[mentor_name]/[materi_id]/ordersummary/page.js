@@ -79,13 +79,13 @@ export default function OrderSummary({ searchParams }) {
         <div className='bg-home'>
             <Navbar />
             <div className='p-4 md:px-36 md:py-20 text-white capitalize'>
-                <p className='font-bold md:text-4xl mb-24'>Your Appointment is Ready,
+                <p className='font-bold md:text-4xl text-xl mt-10 md:mb-24 mb-10'>Your Appointment is Ready,
                     <br />
                     Please complete your Appointment
                 </p>
-                <div className='flex md:flex-row'>
-                    <img src={foto} alt='foto-mentor' className=' w-56 h-56 rounded-box md:mr-10' />
-                    <div className='mr-40'>
+                <div className='flex md:flex-row flex-col'>
+                    <img src={foto} alt='foto-mentor' className=' w-56 h-56 rounded-box md:mr-10 mb-5' />
+                    <div className='md:mr-40 mb-10'>
                         <p className='md:text-3xl md:font-semibold md:mb-5'>{nama}</p>
                         <p className='font-semibold text-ellipsis mb-2'>{title}</p>
                         <div className='flex flex-row mb-5'>

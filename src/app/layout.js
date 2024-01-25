@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./globalicons.css"
 import ReduxProvider from "@/Redux/features/provider";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";

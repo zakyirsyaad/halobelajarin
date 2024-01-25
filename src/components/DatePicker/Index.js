@@ -106,7 +106,7 @@ const DatePicker = ({ apiDetail, materi_Id, mentor_name }) => {
                 onChange={handleTimeChange}
                 value={value.selectedTime}
             >
-                <option disabled>Whats ur time?</option>
+                {/* <option disabled selected>Whats ur time?</option> */}
                 {generateTimeOptions()}
             </select>
 

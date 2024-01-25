@@ -133,11 +133,7 @@ const authSlice = createSlice({
                 console.error(action.error);
             })
             .addCase(signInUser.pending, (state) => {
-                state.loading = true;
-                toast.loading('Pending', {
-                    position: 'top-right',
-                    autoClose: false, // Sesuaikan dengan kebutuhan Anda
-                });
+                state.loading = true, toast.loading("pending")
             })
             .addCase(signInUser.fulfilled, (state, { payload }) => {
                 state.loading = false;
@@ -169,13 +165,9 @@ const authSlice = createSlice({
                 state.loading = true;
                 state.error = ""
 
-                toast.loading('Pending', {
-                    position: 'top-right',
-                    autoClose: false, // Sesuaikan dengan kebutuhan Anda
-                });
             })
             .addCase(signUpUser.fulfilled, (state, { payload: { error, msg } }) => {
-                state.loading = false;
+                state.loading = false
                 if (error) {
                     state.error = error;
                 } else {
