@@ -3,7 +3,7 @@ import React from 'react'
 export default function ClassList() {
     return (
         <div>
-            <p>Class</p>
+            <p>ISI DAFTAR SEMUA KELAS SETIAP MEMBER NTAR DISINI</p>
         </div>
     )
 }

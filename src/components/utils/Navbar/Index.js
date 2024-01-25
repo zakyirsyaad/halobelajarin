@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import Search from '../../Search/Index';
+import Search from '../../Search/NavbarSearch/Index';
 import JoinModal from '@/components/Button/JoinModal';
 import logoNav from '../../../assets/logo-belajarin.png';
 import Image from 'next/image';

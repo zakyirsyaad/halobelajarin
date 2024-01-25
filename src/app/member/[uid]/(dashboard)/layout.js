@@ -9,7 +9,7 @@ export default async function ProfileMember({ params, children }) {
     const detailMember = await response.json()
 
     return (
-        <div className='bg-home p-10 md:h-screen flex md:flex-row flex-col'>
+        <div className=' p-10 md:h-screen flex md:flex-row flex-col bg-slate-800'>
             <Sidebar apiMember={detailMember} />
             <div>{children}</div>
         </div>
