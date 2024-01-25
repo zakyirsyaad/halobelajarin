@@ -1,5 +1,6 @@
 'use client'
 
+import { signInWithGoogle } from "@/services/firebase"
 import Link from "next/link"
 
 export default function JoinModal() {
@@ -15,7 +16,7 @@ export default function JoinModal() {
                         <button className="btn btn-neutral mr-5 w-36 md:w-52 md:h-20 md:text-xl" onClick={() => document.getElementById('my_modal_3').showModal()}>Member</button>
                         <dialog id="my_modal_3" className="modal">
                             <div className="modal-box">
-                                <button className="btn w-full mb-5" >
+                                <button className="btn w-full mb-5" onClick={signInWithGoogle}>
                                     Continue with Google
                                 </button>
                                 <Link href='/Register'>

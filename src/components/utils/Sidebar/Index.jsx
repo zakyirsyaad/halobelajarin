@@ -1,12 +1,17 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Sidebar({ apiMember }) {
+    const fotoStorages = localStorage.getItem("foto");
+    const foto = apiMember.photoURL || fotoStorages;
+
     return (
         <aside className='bg-blue-100 text-blue-700 flex flex-col md:w-72 w-full md:h-full rounded-3xl py-5 px-3 mr-10 mb-10 md:mb-0'>
             <div className='flex flex-col items-center mb-10'>
-                <Image src={apiMember.photoURL} alt='Foto Profile Member Belajarin' className='rounded-full mb-2 border-2 border-blue-500' width={90} height={90} />
+                <Image src={foto} alt='Foto Profile Member Belajarin' className='rounded-full mb-2 border-2 border-blue-500' width={90} height={90} />
                 <p className='capitalize text-lg font-semibold'>{apiMember.nama}</p>
                 <p className='capitalize text-sm'>{apiMember.role}</p>
             </div>
