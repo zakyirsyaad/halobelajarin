@@ -4,10 +4,10 @@ import React from 'react'
 export default function Category() {
     return (
         <header className='md:flex md:text-wrap md:justify-between md:text-white md:p-4 md:px-36 md:py-2 md:flex-row md:items-center md:font-semibold md:text-lg invisible md:visible '>
-            <Link href='/' className='transition duration-300 hover:text-blue-500'>
+            <Link href='/ProgrammingTech' className='transition duration-300 hover:text-blue-500'>
                 Programming & Tech
             </Link>
-            <Link href='/' className='transition duration-300 hover:text-blue-500'>
+            <Link href='/Data' className='transition duration-300 hover:text-blue-500'>
                 Data
             </Link>
             <Link href='/' className='transition duration-300 hover:text-blue-500'>

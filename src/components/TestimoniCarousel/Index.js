@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import imgTesti1 from '/src/assets/human-testi-1.png';
 import { Carousel } from 'antd';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Testimonicarousel() {
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['0 1', '1.33 1']
+    })
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
+
     return (
-        <div>
+        <motion.div
+            ref={ref}
+            style={{
+                scale: scaleProgress,
+                opacity: opacityProgress
+            }}
+        >
             <Carousel autoplay>
                 <div className=' bg-black/[.4] p-5 rounded-box'>
                     <div className='flex flex-col md:flex-row md:justify-between mx-3 my-5'>
@@ -41,6 +56,6 @@ export default function Testimonicarousel() {
                     </div>
                 </div>
             </Carousel>
-        </div>
+        </motion.div>
     );
 }

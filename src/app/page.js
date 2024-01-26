@@ -1,37 +1,33 @@
 'use client'
 
+import About from "@/components/About/Index";
 import BannerCarousel from "@/components/BannerCarousel/Index";
-import PopularCard from "@/components/CardClass/PopularCard/Index";
+import StatisCount from "@/components/StatistCount/Index";
 import Testimonicarousel from "@/components/TestimoniCarousel/Index";
-import Category from "@/components/utils/Category/Index";
 import Footer from "@/components/utils/Footer/Index";
-import Navbar from "@/components/utils/Navbar/Index";
+import NavbarLandingPage from "@/components/utils/Navbar/landingPage";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-// import { useSelector } from "react-redux";
+import { React, useEffect } from "react";
 
 export default function Home() {
-  // const isLoggedIn = useSelector(state => state.auth.accessToken);
-  // const user = useSelector(state => state.auth.user);
   const router = useRouter();
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('accessToken')
     const uid = localStorage.getItem('uid')
-    // Pemeriksaan status login
     if (isLoggedIn) {
-      // Jika sudah login dan uid ada, arahkan ke halaman utama
       router.push(`/member/${uid}`);
     }
-  }, []); // Run the effect when isLoggedIn changes
+  }, []);
+
 
   return (
     <div className="bg-home">
-      <Navbar />
-      <Category />
-      <div className="p-4 md:px-36 md:py-24">
+      <NavbarLandingPage />
+      <div className="p-4 md:px-36">
         <BannerCarousel />
-        <PopularCard />
+        <StatisCount />
+        <About />
         <Testimonicarousel />
       </div>
       <Footer />

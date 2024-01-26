@@ -7,7 +7,7 @@ export default function JoinModal() {
     return (
         <div>
             {/* Open the modal using document.getElementById('ID').showModal() method */}
-            <button className="btn w-28 text-lg" onClick={() => document.getElementById('my_modal_2').showModal()}>Join</button>
+            <button className="btn px-10 text-lg" onClick={() => document.getElementById('my_modal_2').showModal()}>Join</button>
             <dialog id="my_modal_2" className="modal">
                 <div className="modal-box text-black">
                     <h3 className="font-bold text-xl md:text-4xl">Select the role you want to register!</h3>
