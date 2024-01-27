@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export default async function Data() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/data`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/video-animation`)
     const data = await response.json()
 
     return (
@@ -16,7 +16,7 @@ export default async function Data() {
                     <div>
                         {subCategory.subMenu.map((menuItem, subIndex) => (
                             <div key={subIndex}>
-                                <Link href={`/Data/${menuItem.uid}`}>
+                                <Link href={`/VideoAnimation/${menuItem.uid}`}>
                                     <p className='duration-200 hover:bg-blue-300 hover:text-blue-700 hover:font-bold hover:px-2 hover:py-1 rounded-md font-light'>{menuItem.title}</p>
                                 </Link>
                                 {/* <img src={menuItem.image} alt={menuItem.title} /> */}
