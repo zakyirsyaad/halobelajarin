@@ -2,6 +2,7 @@
 
 import About from "@/components/About/Index";
 import BannerCarousel from "@/components/BannerCarousel/Index";
+import ProgramBelajarin from "@/components/ProgramBelajarin/Index";
 import StatisCount from "@/components/StatistCount/Index";
 import Testimonicarousel from "@/components/TestimoniCarousel/Index";
 import Footer from "@/components/utils/Footer/Index";
@@ -28,6 +29,7 @@ export default function Home() {
         <BannerCarousel />
         <StatisCount />
         <About />
+        <ProgramBelajarin />
         <Testimonicarousel />
       </div>
       <Footer />

@@ -65,7 +65,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <CldVideoPlayer src="kcyyar2wxpsaxrgpnqyt" width='1280' height='720' />
+                <CldVideoPlayer src="kcyyar2wxpsaxrgpnqyt" width='1280' height='720' className='rounded-box' />
             </div>
         </motion.div>
     )

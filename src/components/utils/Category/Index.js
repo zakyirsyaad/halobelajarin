@@ -11,7 +11,7 @@ export default function Category() {
                 Data
             </Link>
             <Link href='/' className='transition duration-300 hover:text-blue-500'>
-                Busisness
+                Business
             </Link>
             <Link href='/' className='transition duration-300 hover:text-blue-500'>
                 Graphic & Design
