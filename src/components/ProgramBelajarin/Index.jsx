@@ -37,7 +37,7 @@ export default function ProgramBelajarin() {
                     </div>
                 </Link>
 
-                <Link href='/Business'>
+                <Link href='/Bussiness'>
                     <div className='flex flex-col items-center duration-200 hover:shadow-md  hover:shadow-white/45 w-48 p-3 rounded-md'>
                         <span className="material-symbols-outlined text-4xl mb-5">
                             storefront
