@@ -2,7 +2,8 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import JoinModal from '@/components/Button/JoinModal';
-import logoNav from '../../../assets/logo-belajarin.png';
+import logoNav from '../../../assets/BELAJARIN_LOGO_black-16.png';
+import logoScrolledNav from '../../../assets/logo-belajarin.png';
 import Image from 'next/image';
 
 export default function NavbarLandingPage() {
@@ -21,10 +22,10 @@ export default function NavbarLandingPage() {
         };
     }, []);
     return (
-        <header className={`flex flex-col justify-between text-white duration-300 ${scrolled ? 'fixed top-0 left-0 right-0 bg-blue-700 sm:p-4 md:px-36 md:py-8 md:flex-row md:items-center z-20' : 'sm:p-4 md:px-36 md:py-8 md:flex-row md:items-center'}`}>
+        <header className={`flex flex-col justify-between text-secondary duration-300 ${scrolled ? 'fixed top-0 left-0 right-0 bg-secondary/75 text-white sm:p-4 md:px-36 md:py-5 md:flex-row md:items-center z-20' : 'sm:p-4 md:px-36 md:py-8 md:flex-row md:items-center'}`}>
             <Link href='/'>
                 <Image
-                    src={logoNav}
+                    src={scrolled ? logoScrolledNav : logoNav}
                     alt='belajarin'
                     className='w-48 md:w-36 h-auto object-cover cursor-pointer mb-5 md:mb-0'
                 />

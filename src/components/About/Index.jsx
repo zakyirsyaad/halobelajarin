@@ -20,52 +20,56 @@ export default function About() {
             style={{
                 scale: scaleProgress,
                 opacity: opacityProgress
-            }} className='bg-black/[.4] my-20 p-10 text-white rounded-box'>
-            <p className='text-3xl font-medium text-white mb-10 md:mb-0'>Why belajarin? Good Question.</p>
-            <div className='md:flex md:flex-row items-center'>
-                <div className=' md:mr-44'>
-                    <div className='mb-5'>
-                        <div className='flex flex-row items-center'>
-                            <span className="material-symbols-outlined text-white/50 mr-3">
+            }}
+            className='px-36 my-20 rounded-box'>
+            <p className='text-5xl font-black mb-14 font-space'>Why belajarin? <span className='font-juana italic'>Good Question.</span> </p>
+            <div className='flex flex-row items-center'>
+                <div className='mr-10'>
+                    <div className='flex flex-row mb-5'>
+                        <div className='flex flex-row w-72 mr-3'>
+                            <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
-                            <p className='text-xl font-medium'>Affordable prices</p>
+                            <div className='flex flex-col'>
+                                <p className='text-xl font-bold'>Affordable prices</p>
+                                <p className='font-medium'>Get cheap mentoring prices starting from Rp20.000 per 1-hour session</p>
+                            </div>
                         </div>
-                        <p className='text-white/50 mr-3'>With the price limitations we have set, you will not incur any losses.</p>
+
+                        <div className='flex flex-row w-72'>
+                            <span className="material-symbols-outlined mr-3">
+                                task_alt
+                            </span>
+                            <div className='flex flex-col'>
+                                <p className='text-xl font-bold'>Clear learning path</p>
+                                <p className='font-medium'>The material presented by the mentor has been curated so that it has a learning path that meets standards</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className='mb-5'>
-                        <div className='flex flex-row items-center'>
-                            <span className="material-symbols-outlined text-white/50 mr-3">
+                    <div className='flex flex-row'>
+                        <div className='flex flex-row w-72 mr-3'>
+                            <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
-                            <p className='text-xl font-medium'>Acquire quality knowledge effortlessly.</p>
+                            <div className='flex flex-col'>
+                                <p className='text-xl font-bold'>Easy registration process for mentors</p>
+                                <p className='font-medium'>Mentors can register without complicated paperwork and the selection process takes no more than 3 days</p>
+                            </div>
                         </div>
-                        <p className='text-white/50 mr-3'>Delegate your confusion to a talented mentor within minutes, and achieve long-term results.</p>
-                    </div>
 
-                    <div className='mb-5'>
-                        <div className='flex flex-row items-center'>
-                            <span className="material-symbols-outlined text-white/50 mr-3">
+                        <div className='flex flex-row w-72'>
+                            <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
-                            <p className='text-xl font-medium'>Easy payment process.</p>
+                            <div className='flex flex-col'>
+                                <p className='text-xl font-bold'>Round-the-clock, 24/7 guidance availables</p>
+                                <p className='font-medium'>We provide access to mentoring 24/7, anytime and anywhere without interruption</p>
+                            </div>
                         </div>
-                        <p className='text-white/50 mr-3'>Your issues can be resolved with our quick and easy payment solutions.</p>
-                    </div>
-
-                    <div className='mb-5'>
-                        <div className='flex flex-row items-center'>
-                            <span className="material-symbols-outlined text-white/50 mr-3">
-                                task_alt
-                            </span>
-                            <p className='text-xl font-medium'>Gain access to round-the-clock guidance 24/7.</p>
-                        </div>
-                        <p className='text-white/50 mr-3'>We provide access to mentoring 24/7, anytime and anywhere without interruption.</p>
                     </div>
                 </div>
-
-                <CldVideoPlayer src="kcyyar2wxpsaxrgpnqyt" width='1280' height='720' className='rounded-box' />
+                <CldVideoPlayer src="kcyyar2wxpsaxrgpnqyt" width='1280' height='720' className='rounded-box border-2 border-secondary' />
             </div>
         </motion.div>
     )

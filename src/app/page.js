@@ -1,10 +1,10 @@
 'use client'
 
 import About from "@/components/About/Index";
-import BannerCarousel from "@/components/BannerCarousel/Index";
+import Banner from "@/components/Banner/Index";
 import ProgramBelajarin from "@/components/ProgramBelajarin/Index";
 import StatisCount from "@/components/StatistCount/Index";
-import Testimonicarousel from "@/components/TestimoniCarousel/Index";
+import Testimoni from "@/components/Testimoni/Index";
 import Footer from "@/components/utils/Footer/Index";
 import NavbarLandingPage from "@/components/utils/Navbar/landingPage";
 import { useRouter } from "next/navigation";
@@ -23,15 +23,13 @@ export default function Home() {
 
 
   return (
-    <div className="bg-home">
+    <div className="bg-primary">
       <NavbarLandingPage />
-      <div className="p-4 md:px-36">
-        <BannerCarousel />
-        <StatisCount />
-        <About />
-        <ProgramBelajarin />
-        <Testimonicarousel />
-      </div>
+      <Banner />
+      <StatisCount />
+      <About />
+      <Testimoni />
+      <ProgramBelajarin />
       <Footer />
     </div>
   );

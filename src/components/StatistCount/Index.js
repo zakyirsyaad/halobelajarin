@@ -16,7 +16,7 @@ export default function StatisCount() {
             } else {
                 setCount((prevCount) => prevCount + 1);
             }
-        }, 100);
+        }, 50);
 
         // Clear the interval when the component is unmounted
         return () => clearInterval(intervalId);
@@ -37,20 +37,26 @@ export default function StatisCount() {
 
 
     return (
-        <motion.div
-            ref={ref}
-            style={{
-                scale: scaleProgress,
-                opacity: opacityProgress
-            }}
-            className='bg-blue-700/20 text-white my-20 py-10 px-5 rounded-box flex flex-col items-center text-center'>
-            <p className='font-bold text-xl text-white md:text-4xl mb-5'>Mentoring Platform?</p>
-            <p className='text-2xl'><span className='text-4xl'>{pad(count)}+</span> Member was joined in belajarin</p>
-            <div className='flex flex-row items-center bg-black/45 px-5 rounded-box mt-5'>
-                <p className='mr-5'>we mentoring on</p>
-                <Image src={dcLogo} width={50} height={75} alt='Trusted Belajarin' className='mr-5' />
-                <Image src={gdscLogo} width={50} height={75} alt='Trusted Belajarin' />
-            </div>
-        </motion.div>
+        <div
+            className='bg-secondary text-white my-20 py-5 px-12 p-4 md:px-36 flex flex-row justify-between items-center text-center font-space'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 92 92" fill="none" className='self-start'>
+                <path opacity="0.5" d="M92 45.9986C66.5933 45.9986 45.9986 66.5933 45.9986 92C45.9986 66.5933 25.4038 45.9986 0 45.9986C25.4038 45.9986 45.9986 25.4038 45.9986 0C45.9986 25.4038 66.5933 45.9986 92 45.9986Z" fill="#EDEE94" />
+            </svg>
+            <motion.div
+                ref={ref}
+                style={{
+                    scale: scaleProgress,
+                    opacity: opacityProgress
+                }}
+            >
+                <p className=' text-white text-xl mb-5'>As per today, there are already</p>
+                <p className='text-4xl font-space text-third font-medium mb-5'><span className='text-4xl'>{pad(count)}+</span> members & <span className='text-4xl'>{pad(count)}+</span>mentors</p>
+                <p className='text-2xl'>joined Belajarin!</p>
+            </motion.div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" viewBox="0 0 92 92" fill="none" className='self-end'>
+                <path opacity="0.5" d="M92 45.9986C66.5933 45.9986 45.9986 66.5933 45.9986 92C45.9986 66.5933 25.4038 45.9986 0 45.9986C25.4038 45.9986 45.9986 25.4038 45.9986 0C45.9986 25.4038 66.5933 45.9986 92 45.9986Z" fill="#EDEE94" />
+            </svg>
+        </div>
     )
 }

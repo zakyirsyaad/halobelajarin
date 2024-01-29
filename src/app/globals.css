@@ -7,3 +7,20 @@
     background-position: top;
     background-size: cover;
 }
+
+.font-space {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+@font-face {
+    font-family: juana;
+    src: url(../assets/font/Fontspring-DEMO-juanaalt-medium.otf);
+}
+
+.font-juana {
+    font-family: juana;
+}
+
+.bg-banner-1 {
+    background-image: url(../assets//banner-1.svg);
+}

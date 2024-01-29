@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#FEFAF5",
+        secondary: "#0E0801",
+        third: "#E6E720"
+      }
     },
   },
   daisyui: {
