@@ -5,6 +5,7 @@ import JoinModal from '@/components/Button/JoinModal';
 import logoNav from '../../../assets/BELAJARIN_LOGO_black-16.png';
 import logoScrolledNav from '../../../assets/logo-belajarin.png';
 import Image from 'next/image';
+import { signInWithGoogle } from '@/services/firebase';
 
 export default function NavbarLandingPage() {
     const [scrolled, setScrolled] = useState(false);
@@ -52,7 +53,14 @@ export default function NavbarLandingPage() {
                         </li>
                         <li>                <Link href='/' className='text-lg font-medium mb-5 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
                         </li>
-                        <li>                <JoinModal /></li>
+                        <li>             <button className="btn w-full mb-5" onClick={signInWithGoogle}>
+                            Continue with Google
+                        </button></li>
+                        <li> <Link href='/Register'>
+                            <button className="btn w-full">
+                                Continue with E-Mail
+                            </button>
+                        </Link></li>
                     </ul>
                 </div>
             </div>
