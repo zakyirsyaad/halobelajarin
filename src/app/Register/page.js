@@ -7,22 +7,22 @@ import RegisterForm from './register'
 
 export default function Register() {
     return (
-        <div className='bg-home md:pl-52 pl-4 h-screen flex md:flex-row md:justify-between'>
-            <div className='md:w-1/2'>
+        <div className='bg-secondary md:pl-10 p-4 lg:pl-10 lg:p-0 2xl:pl-36 h-screen flex md:flex-row md:justify-center lg:justify-between'>
+            <div className='md:w-full lg:w-1/2 lg:mr-10 flex flex-col justify-evenly'>
                 <Link href='/'>
-                    <Image src={logoSign} alt='belajarin' className='md:mb-32 md: py-10 md:item-baseline' width={200} height={100} />
+                    <Image src={logoSign} alt='belajarin' className='md:py-10 md:item-baseline' width={200} height={100} />
                 </Link>
 
-                <p className='md:text-6xl md:font-semibold md:mb-14 text-3xl font-medium mb-10 text-white'>
+                <p className='md:text-6xl md:font-semibold text-3xl font-medium text-third'>
                     Welcome,
                     <br />
                     Members👋🏻 !
                 </p>
                 <RegisterForm />
-                <p className=' text-slate-300 md:text-lg md:mt-10 mt-5'>Do you have account? <Link href='/Login' className='text-white font-bold'>Login</Link></p>
+                <p className=' text-third md:text-lg'>Do you have account? <Link href='/Login' className='text-white font-bold'>Login</Link></p>
             </div>
             <div>
-                <Image src={bannerSign} alt='sign-belajarin' className='md:w-max md:h-screen md:visible invisible' width={400} height={500} />
+                <Image src={bannerSign} alt='sign-belajarin' className='hidden lg:block lg:h-full xl:w-full object-cover' width={400} height={500} />
             </div>
         </div >
     )

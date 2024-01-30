@@ -40,27 +40,28 @@ export default function NavbarLandingPage() {
             <div className="drawer flex md:hidden z-10">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
-                    {/* Page content here */}
                     <label htmlFor="my-drawer" className="btn bg-third text-secondary drawer-button">Menu</label>
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-                        {/* Sidebar content here */}
-                        <li>                <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Become a Mentor</Link>
+                        <li>
+                            <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
                         </li>
-                        <li>                <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
+                        <li>
+                            <Link href='/' className='text-lg font-medium mb-5 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
                         </li>
-                        <li>                <Link href='/' className='text-lg font-medium mb-5 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
+                        <li>
+                            <button className="btn w-full mb-5" onClick={signInWithGoogle}>
+                                Continue with Google
+                            </button></li>
+                        <li>
+                            <Link href='/Register'>
+                                <button className="btn w-full">
+                                    Continue with E-Mail
+                                </button>
+                            </Link>
                         </li>
-                        <li>             <button className="btn w-full mb-5" onClick={signInWithGoogle}>
-                            Continue with Google
-                        </button></li>
-                        <li> <Link href='/Register'>
-                            <button className="btn w-full">
-                                Continue with E-Mail
-                            </button>
-                        </Link></li>
                     </ul>
                 </div>
             </div>
