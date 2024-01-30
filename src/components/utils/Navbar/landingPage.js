@@ -22,21 +22,40 @@ export default function NavbarLandingPage() {
         };
     }, []);
     return (
-        <header className={`flex flex-col justify-between text-secondary duration-300 ${scrolled ? 'fixed top-0 left-0 right-0 bg-secondary/75 text-white sm:p-4 md:px-36 md:py-5 md:flex-row md:items-center z-20' : 'sm:p-4 md:px-36 md:py-8 md:flex-row md:items-center'}`}>
+        <header className={`text-secondary duration-300 flex flex-col justify-between ${scrolled ? 'md:fixed md:top-0 md:left-0 md:right-0 bg-secondary/75 text-white sm:p-4 lg:px-28 xl:px-36 md:py-5 lg:flex-row z-20 lg:items-center' : 'p-4 lg:px-24 xl:px-36  xl:py-8 lg:flex-row lg:items-center'}`}>
             <Link href='/'>
                 <Image
                     src={scrolled ? logoScrolledNav : logoNav}
-                    alt='belajarin'
-                    className='w-48 md:w-36 h-auto object-cover cursor-pointer mb-5 md:mb-0'
+                    alt='belajarin logo'
+                    className='w-48 md:w-36 h-auto object-cover cursor-pointer mb-5 xl:mb-0'
                 />
             </Link>
-            <nav className='flex flex-row items-center'>
-                {/* <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Explore</Link> */}
+            <nav className=' hidden md:flex md:flex-row md:items-center'>
                 <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Become a Mentor</Link>
                 <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
                 <Link href='/' className='text-lg font-medium mb-5 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
                 <JoinModal />
             </nav>
+            <div className="drawer flex md:hidden z-10">
+                <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content">
+                    {/* Page content here */}
+                    <label htmlFor="my-drawer" className="btn bg-third text-secondary drawer-button">Menu</label>
+                </div>
+                <div className="drawer-side">
+                    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                    <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                        {/* Sidebar content here */}
+                        <li>                <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Become a Mentor</Link>
+                        </li>
+                        <li>                <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
+                        </li>
+                        <li>                <Link href='/' className='text-lg font-medium mb-5 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
+                        </li>
+                        <li>                <JoinModal /></li>
+                    </ul>
+                </div>
+            </div>
         </header>
     );
 }

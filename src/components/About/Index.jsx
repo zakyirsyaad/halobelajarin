@@ -1,18 +1,18 @@
 "use client"
 
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import { CldVideoPlayer } from 'next-cloudinary';
 import 'next-cloudinary/dist/cld-video-player.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function About() {
-    const ref = useRef(null)
+    const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ['0 1', '1.33 1']
-    })
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
+    });
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
     return (
         <motion.div
@@ -21,12 +21,14 @@ export default function About() {
                 scale: scaleProgress,
                 opacity: opacityProgress
             }}
-            className='px-36 my-20 rounded-box'>
+            className='lg:px-24 xl:px-36 md:my-20'>
             <p className='text-5xl font-black mb-14 font-space'>Why belajarin? <span className='font-juana italic'>Good Question.</span> </p>
-            <div className='flex flex-row items-center'>
-                <div className='mr-10'>
-                    <div className='flex flex-row mb-5'>
-                        <div className='flex flex-row w-72 mr-3'>
+            <div className='flex flex-col lg:flex-row items-center'>
+
+                {/* Left Column */}
+                <div className='md:mr-10 mb-5 lg:mb-0'>
+                    <div className='flex flex-col md:flex-row md:mb-5'>
+                        <div className='flex flex-row w-full md:w-72 md:mr-3'>
                             <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
@@ -36,7 +38,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className='flex flex-row w-72'>
+                        <div className='flex flex-row w-full md:w-72'>
                             <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
@@ -47,8 +49,8 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className='flex flex-row'>
-                        <div className='flex flex-row w-72 mr-3'>
+                    <div className='flex flex-col md:flex-row'>
+                        <div className='flex flex-row w-full md:w-72 md:mr-3'>
                             <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
@@ -58,19 +60,21 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className='flex flex-row w-72'>
+                        <div className='flex flex-row w-full md:w-72'>
                             <span className="material-symbols-outlined mr-3">
                                 task_alt
                             </span>
                             <div className='flex flex-col'>
-                                <p className='text-xl font-bold'>Round-the-clock, 24/7 guidance availables</p>
+                                <p className='text-xl font-bold'>Round-the-clock, 24/7 guidance available</p>
                                 <p className='font-medium'>We provide access to mentoring 24/7, anytime and anywhere without interruption</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Right Column */}
                 <CldVideoPlayer src="kcyyar2wxpsaxrgpnqyt" width='1280' height='720' className='rounded-box border-2 border-secondary' />
             </div>
         </motion.div>
-    )
+    );
 }

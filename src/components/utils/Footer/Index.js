@@ -13,7 +13,7 @@ import linkedinLogo from '/src/assets/linkedin-logo-linkedin-icon-transparent-fr
 export default function Footer() {
     return (
         <footer className='text-white bg-secondary md:px-36 md:pt-24 md: pb-10'>
-            <div className='flex nd:flex-row md:justify-between invisible md:visible'>
+            <div className='hidden lg:flex lg:flex-row lg:justify-between'>
                 <div className='flex md:flex-row'>
                     <div className='flex md:flex-col md:mr-20'>
                         <p className='md:text-2xl md:font-medium md:mb-5'>Categories</p>
@@ -53,7 +53,7 @@ export default function Footer() {
                 </div>
             </div>
             <div>
-                <p className=' mt-24 text-center md:text-lg'>© Catalyst International Ltd. 2024</p>
+                <p className=' pt-5 text-center md:text-lg'>© Catalyst International Ltd. 2024</p>
             </div>
         </footer >
     )

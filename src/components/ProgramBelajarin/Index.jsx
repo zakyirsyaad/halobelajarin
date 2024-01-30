@@ -11,10 +11,9 @@ export default function ProgramBelajarin() {
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
     return (
-        <div
-            className='bg-primary text-secondary px-36 my-20'>
+        <div className='bg-primary text-secondary px-8 md:px-20 lg:px-36 py-20'>
             <p className='text-4xl font-bold mb-10 font-space'>We Deserve, what you need</p>
-            <div className='flex flex-row flex-wrap justify-between items-center'>
+            <div className='flex flex-row flex-wrap justify-center lg:justify-between items-center'>
                 <Link href='/ProgrammingTech'>
                     <motion.div
                         ref={ref}

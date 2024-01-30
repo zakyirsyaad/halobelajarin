@@ -38,8 +38,8 @@ export default function StatisCount() {
 
     return (
         <div
-            className='bg-secondary text-white my-20 py-5 px-12 p-4 md:px-36 flex flex-row justify-between items-center text-center font-space'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 92 92" fill="none" className='self-start'>
+            className='bg-secondary text-white mt-20 py-5 px-4 lg:px-24 xl:px-36 flex flex-row justify-between items-center text-center font-space'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 92 92" fill="none" className='self-start'>
                 <path opacity="0.5" d="M92 45.9986C66.5933 45.9986 45.9986 66.5933 45.9986 92C45.9986 66.5933 25.4038 45.9986 0 45.9986C25.4038 45.9986 45.9986 25.4038 45.9986 0C45.9986 25.4038 66.5933 45.9986 92 45.9986Z" fill="#EDEE94" />
             </svg>
             <motion.div
@@ -49,12 +49,12 @@ export default function StatisCount() {
                     opacity: opacityProgress
                 }}
             >
-                <p className=' text-white text-xl mb-5'>As per today, there are already</p>
-                <p className='text-4xl font-space text-third font-medium mb-5'><span className='text-4xl'>{pad(count)}+</span> members & <span className='text-4xl'>{pad(count)}+</span>mentors</p>
+                <p className=' text-white text-base xl:text-xl mb-5'>As per today, there are already</p>
+                <p className='text-xl xl:text-2xl font-space text-third font-medium mb-5'><span className='text-2xl xl:text-4xl'>{pad(count)}+</span> members & <span className='text-2xl xl:text-4xl'>{pad(count)}+</span>mentors</p>
                 <p className='text-2xl'>joined Belajarin!</p>
             </motion.div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" viewBox="0 0 92 92" fill="none" className='self-end'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 92 92" fill="none" className='self-end'>
                 <path opacity="0.5" d="M92 45.9986C66.5933 45.9986 45.9986 66.5933 45.9986 92C45.9986 66.5933 25.4038 45.9986 0 45.9986C25.4038 45.9986 45.9986 25.4038 45.9986 0C45.9986 25.4038 66.5933 45.9986 92 45.9986Z" fill="#EDEE94" />
             </svg>
         </div>
