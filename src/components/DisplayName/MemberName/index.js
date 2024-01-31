@@ -16,7 +16,7 @@ export default function MemberName() {
             ]}
             speed={50}
             repeat={Infinity}
-            className='text-white md:text-4xl text-xl font-bold capitalize'
+            className='text-third    md:text-4xl text-xl font-bold capitalize'
         />
     )
 }

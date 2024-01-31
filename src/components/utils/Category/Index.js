@@ -16,41 +16,38 @@ export default function Category() {
     const VideoAnimation = pathname === '/VideoAnimation'
     const MusicAudio = pathname === '/MusicAudio'
 
-
-
-
     return (
-        <header className='md:flex md:text-wrap md:justify-between md:text-white md:p-4 md:px-36 md:py-2 md:flex-row md:items-center md:font-semibold md:text-lg invisible md:visible '>
+        <header className='hidden text-white font-space md:flex md:flex-row md:flex-wrap md:gap-3 lg:justify-between md:p-4 lg:px-36  '>
             <Link href='/ProgrammingTech'
-                className={Programming ? 'transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={Programming ? 'transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Programming & Tech
             </Link>
             <Link href='/Data'
-                className={Data ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={Data ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Data
             </Link>
             <Link href='/Bussiness'
-                className={Bussiness ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={Bussiness ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Business
             </Link>
             <Link href='/GraphicDesign'
-                className={GraphicDesign ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={GraphicDesign ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Graphic & Design
             </Link>
             <Link href='/DigitalMarketing'
-                className={DigitalMarketing ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={DigitalMarketing ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Digital Marketing
             </Link>
             <Link href='/WritingTranslation'
-                className={WritingTranslation ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={WritingTranslation ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Writing & Translation
             </Link>
             <Link href='/VideoAnimation'
-                className={VideoAnimation ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={VideoAnimation ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Video & Animation
             </Link>
             <Link href='/MusicAudio'
-                className={MusicAudio ? ' transition-all duration-300 bg-white text-blue-700 px-4 rounded-sm' : 'transition duration-300 hover:text-blue-500'}>
+                className={MusicAudio ? ' transition-all duration-300 bg-third font-bold text-secondary px-4 rounded-sm' : 'transition duration-300 hover:text-third'}>
                 Music & Audio
             </Link>
         </header>

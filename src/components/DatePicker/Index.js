@@ -92,7 +92,7 @@ const DatePicker = ({ apiDetail, materi_Id, mentor_name }) => {
 
 
     return (
-        <div>
+        <div className="">
             <Datepicker
                 value={value}
                 onChange={handleValueChange}
@@ -128,7 +128,7 @@ const DatePicker = ({ apiDetail, materi_Id, mentor_name }) => {
                     selectedTime: time
                 }, // the data
             }}>
-                <button className='btn btn-default md:w-full mt-5'>BOOK NOW</button>
+                <button className='btn btn-default w-full mt-5 '>BOOK NOW</button>
             </Link>
         </div>
 

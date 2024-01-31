@@ -32,7 +32,6 @@ export default function NavbarLandingPage() {
                 />
             </Link>
             <nav className=' hidden md:flex md:flex-row md:items-center'>
-                <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Become a Mentor</Link>
                 <Link href='/' className='text-lg font-medium mb-2 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Belajarin AI</Link>
                 <Link href='/' className='text-lg font-medium mb-5 md:mr-10 md:mb-0 transition duration-300 hover:text-blue-500'>Workshop</Link>
                 <JoinModal />

@@ -78,16 +78,18 @@ export default function OrderSummary({ searchParams }) {
     return (
         <div className='bg-home'>
             <Navbar />
-            <div className='p-4 md:px-36 md:py-20 text-white capitalize'>
-                <p className='font-bold md:text-4xl text-xl mt-10 md:mb-24 mb-10'>Your Appointment is Ready,
+            <div className='p-4 lg:px-36 lg:mb-20 text-white capitalize'>
+                <p className='font-bold md:text-2xl text-xl mt-10 mb-10'>Your Appointment is Ready,
                     <br />
                     Please complete your Appointment
                 </p>
-                <div className='flex md:flex-row flex-col'>
-                    <img src={foto} alt='foto-mentor' className=' w-56 h-56 rounded-box md:mr-10 mb-5' />
-                    <div className='md:mr-40 mb-10'>
-                        <p className='md:text-3xl md:font-semibold md:mb-5'>{nama}</p>
-                        <p className='font-semibold text-ellipsis mb-2'>{title}</p>
+                <div className='flex md:flex-row flex-col lg:justify-between items-center md:items-start gap-5'>
+                    <div className='flex flex-col gap-2 items-center'>
+                        <img src={foto} alt='foto-mentor' className=' w-40 h-40 lg:h-64 lg:w-64 object-cover rounded-box' />
+                        <p className='md:font-semibold text-center'>{nama}</p>
+                    </div>
+                    <div className=''>
+                        <p className='font-semibold text-ellipsis mb-2 lg:text-3xl'>{title}</p>
                         <div className='flex flex-row mb-5'>
                             <p className='mr-5 border-2 py-1 px-3 border-blue-700 rounded-xl'>{subCategory}</p>
                             <p className='border-2 py-1 px-3 border-blue-700 rounded-xl'>{subMenu}</p>

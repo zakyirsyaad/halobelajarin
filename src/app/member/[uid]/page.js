@@ -24,10 +24,10 @@ export default function Member() {
     //     }
     // }, []); // Run the effect when isLoggedIn changes
     return (
-        <div className='bg-home'>
+        <div className='bg-secondary'>
             <Navbar />
             <Category />
-            <div className="p-4 md:px-36 md:py-20">
+            <div className="p-4 lg:px-36 md:py-20">
                 <MemberName />
                 <hr className='my-10'></hr>
                 <GetAllClass />
