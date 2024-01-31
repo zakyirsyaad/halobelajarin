@@ -57,7 +57,7 @@ export default async function page({ params }) {
                                     </div>
                                     <div className='bg-third/[.4] p-4 rounded-lg'>
                                         <p className='text-xl font-bold capitalize'>about mentor</p>
-                                        <p className='indent-10'>For 10+ years, I've helped job seekers ditch boring resumes and land amazing gigs at big companies. I'm like a word wizard, unearthing your hidden skills and crafting stories that make hiring managers sit up and say "WOW!" So, ready to make your career dreams come true? Let's chat! </p>
+                                        <p className='indent-10'>For 10+ years, I ve helped job seekers ditch boring resumes and land amazing gigs at big companies. Im like a word wizard unearthing your hidden skills and crafting stories that make hiring managers sit up and say WOW So ready to make your career dreams come true? Lets chat! </p>
                                     </div>
                                 </div>
                             )
