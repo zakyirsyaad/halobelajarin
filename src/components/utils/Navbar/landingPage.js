@@ -55,15 +55,16 @@ export default function NavbarLandingPage() {
                                 Continue with Google
                             </button></li>
                         <li>
-                            <Link href='/Register'>
-                                <button className="btn w-full">
+                            <button className="btn w-full">
+                                <Link href='/Register'>
                                     Continue with E-Mail
-                                </button>
-                            </Link>
+                                </Link>
+                            </button>
+
                         </li>
                     </ul>
                 </div>
             </div>
-        </header>
+        </header >
     );
 }
